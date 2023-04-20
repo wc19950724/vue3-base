@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "esnext", // 编译目标
+    "module": "esnext", // 产物模块类型
+    "strict": true, // 严格模式。为 strictXXX 字段设默认值。
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "rootDir": ".",
+    "noImplicitAny": true, // 不要隐含的any，可以显式any
+    "skipLibCheck": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "types": ["node", "vite/client"],
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "allowJs": true,
+    "jsx": "preserve",
+    "noEmit": true
+  },
+  "include": ["src/**/*", "*.d.ts", "package.json"],
+  "exclude": ["node_modules", "dist"]
+}

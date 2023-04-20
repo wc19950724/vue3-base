@@ -22,7 +22,7 @@
   "scripts": {
     "start": "vite",
     "build": "yarn lint && vite build",
-    "lint": "yarn vue-tsc && yarn prettier && yarn eslint",
+    "lint": "vite build && yarn vue-tsc && yarn prettier && yarn eslint",
     "vue-tsc": "vue-tsc -p tsconfig.json",
     "prettier": "prettier --ignore-path .gitignore . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --write",
     "eslint": "eslint --ignore-path .gitignore . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix"

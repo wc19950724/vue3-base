@@ -1,0 +1,10 @@
+node_modules
+yarn.lock
+dist
+*.log
+
+auto-imports.d.ts
+components.d.ts
+
+package-lock.json
+.eslintrc-auto-import.json

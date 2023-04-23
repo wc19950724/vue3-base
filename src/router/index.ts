@@ -1,7 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 // 自动导入modules文件夹下所有ts文件
-const modules = import.meta.glob("./modules/**/*.ts", {
+const modules = import.meta.glob<{
+  default: BaseRouteRecord | BaseRouteRecord[];
+}>("./modules/**/*.ts", {
   eager: true,
 });
 

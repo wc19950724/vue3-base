@@ -10,8 +10,16 @@ type FetchResult = ReturnType<typeof useFetch>;
 
 const ERROR_ID_PARSE_RESPONSE = "parseResponseError";
 
+class FetchError extends Error {
+  id?: string;
+  data: unknown;
+  constructor() {
+    super();
+  }
+}
+
 export const isFetchParseError = (err: unknown): boolean => {
-  if (err instanceof Error) {
+  if (err instanceof FetchError) {
     return err["id"] === ERROR_ID_PARSE_RESPONSE && err["data"] !== undefined;
   }
 

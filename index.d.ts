@@ -14,21 +14,21 @@ declare module "vue3-json-viewer" {
     /** json数据 */
     value: object | Array<unknown> | string | number | boolean;
     /** 是否自动展开 */
-    expanded: boolean;
+    expanded?: boolean;
     /** 默认展开层级数 */
-    expandDepth: number;
+    expandDepth?: number;
     /** 是否可复制 */
-    copyable: boolean | object;
+    copyable?: boolean | object;
     /** 是否排序 */
-    sort: boolean;
+    sort?: boolean;
     /** 是否支持收起 */
-    boxed: boolean;
+    boxed?: boolean;
     /** 主题 jv-dark | jv-light */
-    theme: string;
+    theme?: string;
     /** 预览模式 */
-    previewMode: boolean;
+    previewMode?: boolean;
     /** 格式化函数 */
-    timeformat: (value: unknown) => string;
+    timeformat?: (value: unknown) => string;
   }
   type JsonViewerType = JsonViewerProps &
     VNodeProps &

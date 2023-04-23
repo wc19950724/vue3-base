@@ -47,7 +47,7 @@ export const freezeCallbackParams = async <
     await fn?.(freezeValue);
     return Promise.resolve();
   } catch (error) {
-    console.error(`不能修改回调参数：${error?.["message"] as string}`);
+    console.error(`不能修改回调参数：${(error as Error)?.["message"]}`);
     return Promise.reject(error);
   }
 };

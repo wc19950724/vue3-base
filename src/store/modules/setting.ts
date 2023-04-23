@@ -3,9 +3,7 @@ import { keys } from "lodash";
 import STYLE_CONFIG from "@/config";
 import { store } from "@/store";
 
-const state: SettingState = {
-  ...STYLE_CONFIG,
-};
+const state = { ...STYLE_CONFIG };
 
 export const useSettingStore = defineStore("setting", {
   state: () => state,
@@ -37,16 +35,17 @@ export const useSettingStore = defineStore("setting", {
       document.documentElement.setAttribute("theme-color", brandTheme);
     },
     updateConfig(payload: Partial<SettingState>) {
-      for (const key in payload) {
-        if (payload[key] !== undefined) {
-          this[key] = payload[key];
-        }
+      let key: keyof SettingState;
+      for (key in payload) {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
+        this.$state[key] = payload[key];
         if (key === "mode") {
           this.changeMode(payload[key]);
         }
-        if (key === "brandTheme") {
-          this.changeBrandTheme(payload[key]);
-        }
+        // if (key === "brandTheme") {
+        //   this.changeBrandTheme(payload[key]);
+        // }
       }
     },
   },

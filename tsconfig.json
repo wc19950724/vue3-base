@@ -10,7 +10,6 @@
     "rootDir": ".",
     "noImplicitAny": true, // 不要隐含的any，可以显式any
     "skipLibCheck": true,
-    "suppressImplicitAnyIndexErrors": true,
     "types": ["node", "vite/client"],
     "paths": {
       "@/*": ["src/*"]

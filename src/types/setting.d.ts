@@ -1,3 +1,10 @@
+enum StateMode {
+  dark = "dark",
+  light = "light",
+  auto = "auto",
+}
+
 interface SettingState {
-  mode: "dark" | "light" | "auto";
+  mode: StateMode;
+  footer: string;
 }

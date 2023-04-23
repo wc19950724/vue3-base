@@ -20,7 +20,6 @@
   "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "volar.autoCompleteRefs": true,
   "editor.mouseWheelZoom": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true

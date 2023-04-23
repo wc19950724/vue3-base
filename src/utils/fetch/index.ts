@@ -1,4 +1,4 @@
-import { createFetch, MaybeComputedRef, UseFetchOptions } from "@vueuse/core";
+import { createFetch, MaybeRefOrGetter, UseFetchOptions } from "@vueuse/core";
 
 import afterFetch from "./afterFetch";
 import beforeFetch from "./beforeFetch";
@@ -10,7 +10,7 @@ export declare interface PostFetchOption {
   autoHandleNoPermissionError?: boolean;
 }
 declare interface PostFetchPayLoadConfig {
-  payload?: MaybeComputedRef<unknown>;
+  payload?: MaybeRefOrGetter<unknown>;
   type?: string;
 }
 
@@ -28,7 +28,7 @@ const useFetch = createFetch({
 });
 
 export const usePostFetch = <T>(
-  url: MaybeComputedRef<string>,
+  url: MaybeRefOrGetter<string>,
   payloadConfig: PostFetchPayLoadConfig,
   UseFetchParams?: UseFetchParams
 ) => {
@@ -50,7 +50,7 @@ export const usePostFetch = <T>(
 };
 
 export const useGetFetch = <T>(
-  url: MaybeComputedRef<string>,
+  url: MaybeRefOrGetter<string>,
   UseFetchParams?: UseFetchParams
 ) => {
   const {

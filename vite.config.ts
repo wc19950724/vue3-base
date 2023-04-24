@@ -1,6 +1,7 @@
 import createVuePlugin from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 import { execSync } from "child_process";
+import fs from "fs";
 import { resolve } from "path";
 import AutoImport from "unplugin-auto-import/vite";
 import { TDesignResolver } from "unplugin-vue-components/resolvers";
@@ -10,13 +11,14 @@ import { createHtmlPlugin } from "vite-plugin-html";
 import svgLoader from "vite-svg-loader";
 
 import { description, keywords, name } from "./package.json";
-
 // 获取当前分支 commitId
-let commitId;
-try {
-  commitId = execSync("git rev-parse --short HEAD").toString().trim();
-} catch (error) {
-  commitId = "";
+let commitId = "";
+if (fs.existsSync(".git")) {
+  try {
+    commitId = execSync("git rev-parse --short HEAD").toString().trim();
+  } catch (error) {
+    commitId = "";
+  }
 }
 
 export default defineConfig({

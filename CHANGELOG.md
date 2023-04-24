@@ -1,3 +1,10 @@
+# [0.0.4](https://github.com/wc19950724/vue3-base-cli/compare/v0.0.3...v0.0.4) (2023-4-24)
+
+### Bug Fixes
+
+- **setting.d.ts:** StateMode is undefined
+- **vite.config.ts:** fatal: not a git repository (or any of the parent directories): .git
+
 # [0.0.3](https://github.com/wc19950724/vue3-base-cli/compare/v0.0.2...v0.0.3) (2023-4-24)
 
 ### Features

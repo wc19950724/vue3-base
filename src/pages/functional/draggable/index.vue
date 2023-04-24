@@ -9,26 +9,10 @@
     <section v-draggable="dragConfig3" class="draggable-base base3">
       基础拖拽3 none 拖拽模式: {{ dragConfig3.mode || "move" }}
     </section>
-
-    <t-button @click="dialogVisible = true">打开弹窗 - 指定拖拽元素</t-button>
-    <t-dialog
-      v-draggable="dragConfig4"
-      attach="body"
-      :visible="dialogVisible"
-      :close-on-esc-keydown="false"
-      :close-on-overlay-click="false"
-      @close="dialogVisible = false"
-      @confirm="dialogVisible = false"
-    >
-      <t-button @click="changeDragConfig4">改变拖拽方式</t-button>
-      拖拽模式: {{ dragConfig4.mode || "move" }}
-    </t-dialog>
   </section>
 </template>
 <script lang="ts" setup>
 import { DraggableValue } from "@/directives/modules/draggable";
-const dialogVisible = ref(false);
-
 const dragConfig1 = ref<DraggableValue>({
   dragstart: (e) => {
     console.log(e, "start");
@@ -49,19 +33,6 @@ const dragConfig3 = ref<DraggableValue>({
   isExceed: true,
   mode: "drag",
 });
-
-const dragConfig4 = ref<DraggableValue>({
-  el: ".t-dialog",
-  parentEl: ".draggable-wrapper",
-  dragend: async (e) => {
-    await Promise.resolve();
-    console.log(e, "Promise end");
-  },
-});
-
-const changeDragConfig4 = () => {
-  dragConfig4.value.mode = dragConfig4.value.mode === "move" ? "drag" : "move";
-};
 </script>
 <style lang="less" scoped>
 .draggable-wrapper {

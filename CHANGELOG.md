@@ -1,4 +1,10 @@
-# 0.0.1 (2023-4-24)
+# [0.0.2](https://github.com/wc19950724/vue3-base-cli/compare/v0.0.1...v0.0.2) (2023-4-24)
+
+### Doc
+
+- **version:** update version to v0.0.2
+
+# [0.0.1](https://github.com/wc19950724/vue3-base/compare/master...v0.0.1) (2023-4-24)
 
 ## 技术栈
 

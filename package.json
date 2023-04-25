@@ -23,7 +23,7 @@
     "start": "vite",
     "build": "yarn lint && vite build",
     "lint": "yarn prettier && vue-tsc && yarn eslint",
-    "prettier": "prettier --ignore-path .eslintignore **/*.{vue,js,jsx,cjs,mjs,ts,tsx,cts,mts} --loglevel warn --write",
+    "prettier": "prettier --ignore-path .eslintignore **/*.{vue,js,jsx,cjs,mjs,ts,tsx,cts,mts} --write",
     "eslint": "eslint **/*.{vue,js,jsx,cjs,mjs,ts,tsx,cts,mts} --fix"
   },
   "dependencies": {

@@ -30,6 +30,6 @@ develop 作为开发主分支，各开发人员自行基于 develop 检出新分
 
 ```bash
 # 项目根目录
-yarn install
-yarn start
+pnpm install
+pnpm start
 ```

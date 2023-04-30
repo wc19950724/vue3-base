@@ -1,8 +1,4 @@
-enum StateMode {
-  dark = "dark",
-  light = "light",
-  auto = "auto",
-}
+type StateMode = "dark" | "light" | "auto";
 
 interface SettingState {
   mode: StateMode;

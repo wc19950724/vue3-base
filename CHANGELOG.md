@@ -1,4 +1,4 @@
-# 1.0.0 (2023-04-30)
+# [1.0.0](https://github.com/wc19950724/vue3-base/compare/c115b0fc663c66b9b62dacec77d4f8440e9263c9...v1.0.0) (2023-04-30)
 
 
 ### Bug Fixes

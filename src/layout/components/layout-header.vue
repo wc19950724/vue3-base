@@ -11,12 +11,9 @@
       <t-switch
         v-model="themeMode"
         :custom-value="['dark', 'light']"
+        :label="switchLabel"
         size="large"
-      >
-        <template #label="{ value }: { value: typeof themeMode }">
-          <span :class="['iconfont', `icon-${value}`]"></span>
-        </template>
-      </t-switch>
+      />
       <t-dropdown
         :options="dropdownOptions"
         trigger="click"
@@ -36,6 +33,6 @@ import { useBreadcrumb, useHeaderSetting } from "../hooks/useLayoutHeader";
 
 const { breadcrumbOptions } = useBreadcrumb();
 
-const { userName, themeMode, dropdownOptions, clickHandler } =
+const { userName, themeMode, dropdownOptions, clickHandler, switchLabel } =
   useHeaderSetting();
 </script>

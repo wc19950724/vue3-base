@@ -66,6 +66,12 @@ export const useHeaderSetting = () => {
 
   const themeMode = ref<SettingState["mode"]>(mode);
 
+  const switchLabel = () => {
+    return h("span", {
+      class: `iconfont icon-${themeMode.value}`,
+    });
+  };
+
   watch(
     () => unref(themeMode),
     (mode) => {
@@ -101,5 +107,6 @@ export const useHeaderSetting = () => {
     themeMode,
     dropdownOptions,
     clickHandler,
+    switchLabel,
   };
 };

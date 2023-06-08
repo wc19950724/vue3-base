@@ -21,7 +21,7 @@
   "main": "src/main.ts",
   "scripts": {
     "start": "vite",
-    "build": "pnpm lint && vite build",
+    "build": "vite build",
     "lint": "pnpm prettier && vue-tsc && pnpm eslint",
     "prettier": "prettier --ignore-path .eslintignore **/*.{vue,js,jsx,cjs,mjs,ts,tsx,cts,mts} --write",
     "eslint": "eslint **/*.{vue,js,jsx,cjs,mjs,ts,tsx,cts,mts} --fix",

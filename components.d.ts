@@ -9,9 +9,6 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    DesktopIcon: typeof import('tdesign-icons-vue-next')['DesktopIcon']
-    HeartIcon: typeof import('tdesign-icons-vue-next')['HeartIcon']
-    LockOnIcon: typeof import('tdesign-icons-vue-next')['LockOnIcon']
     Result: typeof import('./src/components/result/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
@@ -23,16 +20,11 @@ declare module '@vue/runtime-core' {
     TDivider: typeof import('tdesign-vue-next')['Divider']
     TDropdown: typeof import('tdesign-vue-next')['Dropdown']
     TFooter: typeof import('tdesign-vue-next')['Footer']
-    TForm: typeof import('tdesign-vue-next')['Form']
-    TFormItem: typeof import('tdesign-vue-next')['FormItem']
     THeader: typeof import('tdesign-vue-next')['Header']
     TIcon: typeof import('tdesign-vue-next')['Icon']
-    TInput: typeof import('tdesign-vue-next')['Input']
     TLayout: typeof import('tdesign-vue-next')['Layout']
     TMenu: typeof import('tdesign-vue-next')['Menu']
     TMenuItem: typeof import('tdesign-vue-next')['MenuItem']
-    TOption: typeof import('tdesign-vue-next')['Option']
-    TSelect: typeof import('tdesign-vue-next')['Select']
     TSpace: typeof import('tdesign-vue-next')['Space']
     TSubmenu: typeof import('tdesign-vue-next')['Submenu']
     TSwitch: typeof import('tdesign-vue-next')['Switch']

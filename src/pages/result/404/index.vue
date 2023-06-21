@@ -3,7 +3,3 @@
     <t-button @click="() => $router.push('/')"> 返回首页 </t-button>
   </result>
 </template>
-
-<script setup lang="ts" name="Result404">
-import Result from "@/components/result/index.vue";
-</script>

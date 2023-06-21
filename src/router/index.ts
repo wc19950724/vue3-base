@@ -45,7 +45,7 @@ const staticRoutes: BaseRouteRecord[] = [
   },
   {
     path: "/:w+",
-    redirect: "/",
+    redirect: "/404",
   },
 ];
 

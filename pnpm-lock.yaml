@@ -67,6 +67,9 @@ devDependencies:
   '@vitejs/plugin-vue-jsx':
     specifier: ^3.0.1
     version: 3.0.1(vite@4.3.9)(vue@3.3.4)
+  '@vue/runtime-core':
+    specifier: ^3.3.4
+    version: 3.3.4
   eslint:
     specifier: ^8.43.0
     version: 8.43.0

@@ -10,7 +10,7 @@
     "rootDir": ".",
     "noImplicitAny": true, // 不要隐含的any，可以显式any
     "skipLibCheck": true,
-    "types": ["node", "vite/client", "tdesign-vue-next/global"],
+    "types": ["node", "vite/client"],
     "paths": {
       "@/*": ["src/*"]
     },
@@ -18,12 +18,6 @@
     "jsx": "preserve",
     "noEmit": true
   },
-  "include": [
-    "index.d.ts",
-    "auto-imports.d.ts",
-    "components.d.ts",
-    "src/**/*.ts",
-    "src/**/*.vue"
-  ],
+  "include": ["*.d.ts", "src/**/*"],
   "exclude": ["node_modules", "dist"]
 }

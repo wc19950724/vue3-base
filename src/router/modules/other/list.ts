@@ -38,6 +38,12 @@ export default [
         component: () => import("@/pages/functional/transition/index.vue"),
         meta: { title: "transition" },
       },
+      {
+        path: "/functional/transfer",
+        name: "FunctionalTransfer",
+        component: () => import("@/pages/functional/transfer/index.vue"),
+        meta: { title: "穿梭框" },
+      },
     ],
   },
 ];

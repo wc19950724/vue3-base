@@ -37,12 +37,10 @@ export default defineConfig({
     vueJsx(),
     svgLoader(),
     AutoImport({
-      include: [/\.[tj]sx?$/, /\.vue$/],
       imports: ["pinia", "vue", "vue-router"],
       eslintrc: {
         enabled: true,
       },
-      resolvers: [TDesignResolver({ library: "vue-next", resolveIcons: true })],
     }),
     Components({
       dirs: ["src/components"],
@@ -80,7 +78,7 @@ export default defineConfig({
       less: {
         modifyVars: {
           hack: `true; @import (reference) "${resolve(
-            "src/styles/variables.less"
+            "src/styles/variables.less",
           )}";`,
         },
         math: "strict",

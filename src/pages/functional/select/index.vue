@@ -81,7 +81,7 @@ const options3 = ref([
 const disableHandler = (
   row: DataListType,
   option: OptionsType,
-  type: number
+  type: number,
 ) => {
   if (type === 1) {
     if (row.select2 && row.select3) {
@@ -89,7 +89,7 @@ const disableHandler = (
         (item) =>
           item.select1 === option.value &&
           item.select2 === row.select2 &&
-          item.select3 === row.select3
+          item.select3 === row.select3,
       );
     }
   } else if (type === 2) {
@@ -98,7 +98,7 @@ const disableHandler = (
         (item) =>
           item.select1 === row.select1 &&
           item.select2 === option.value &&
-          item.select3 === row.select3
+          item.select3 === row.select3,
       );
     }
   } else if (type === 3) {
@@ -107,7 +107,7 @@ const disableHandler = (
         (item) =>
           item.select1 === row.select1 &&
           item.select2 === row.select2 &&
-          item.select3 === option.value
+          item.select3 === option.value,
       );
     }
   }

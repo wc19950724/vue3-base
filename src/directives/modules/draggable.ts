@@ -76,7 +76,7 @@ const tempDragMapValue = ref<DragMapValue>();
 /** 处理基础配置项 */
 const baseConfigHandler = (
   el: HTMLElement,
-  binding: DirectiveBinding<DraggableParams>
+  binding: DirectiveBinding<DraggableParams>,
 ) => {
   let dragEl = el;
   const dragConfig: DraggableValue = {
@@ -214,7 +214,7 @@ const dragstartHandler = async (targetEvent: DragEventType) => {
     }
     // 获取拖拽指定父元素
     dragMapValue.parentDom = document.querySelector(
-      dragConfig.parentEl || "html"
+      dragConfig.parentEl || "html",
     ) as HTMLElement;
     // 添加拖拽中className
     dragEl.classList.add(dragConfig.draggingClassName || "dragging");

@@ -16,13 +16,13 @@ export const debounceMessage = throttle(
   {
     leading: true,
     trailing: false,
-  }
+  },
 );
 
 /** 递归处理对象 */
 export const reforObj = <T extends object, F extends (arg: T) => void>(
   obj: T,
-  fn: F
+  fn: F,
 ) => {
   fn(obj);
   for (const key in obj) {
@@ -33,10 +33,10 @@ export const reforObj = <T extends object, F extends (arg: T) => void>(
 /** 冻结回调参数 */
 export const freezeCallbackParams = async <
   T extends object,
-  F extends (arg: T) => void | Promise<unknown>
+  F extends (arg: T) => void | Promise<unknown>,
 >(
   params: T,
-  fn?: F
+  fn?: F,
 ) => {
   try {
     /** 冻结回调参数，不可修改 */

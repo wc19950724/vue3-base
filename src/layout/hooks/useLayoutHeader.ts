@@ -12,7 +12,7 @@ export const useBreadcrumb = () => {
 
   const findParentRoute = (
     routeName: string,
-    routes: TdBreadcrumbItemProps[]
+    routes: TdBreadcrumbItemProps[],
   ) => {
     const routeItem = allRoutes.find((item) => item.name === routeName);
     if (routeItem) {
@@ -81,7 +81,7 @@ export const useHeaderSetting = () => {
     },
     {
       immediate: true,
-    }
+    },
   );
 
   const dropdownOptions: DropdownOption[] = [

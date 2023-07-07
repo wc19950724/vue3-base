@@ -28,7 +28,7 @@ export const isFetchParseError = (err: unknown): boolean => {
 
 export const defaultAutoHandleLocalError = <T extends FetchResult>(
   err: Error,
-  result: T
+  result: T,
 ) => {
   const { aborted, statusCode } = result;
 
@@ -38,7 +38,7 @@ export const defaultAutoHandleLocalError = <T extends FetchResult>(
     message = "无法连接服务器";
 
     const { meta }: { meta: BaseRouteRecord["meta"] } = unref(
-      router.currentRoute
+      router.currentRoute,
     );
     if (!meta.notAuth) {
       setTimeout(() => {
@@ -55,7 +55,7 @@ export const useFetchResult = <T extends FetchResult>(
   option?: Pick<
     PostFetchOption,
     "autoHandleLocalError" | "autoHandleNoPermissionError"
-  >
+  >,
 ): T => {
   const { onFetchError } = fetchResult;
 

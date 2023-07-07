@@ -30,7 +30,7 @@ const useFetch = createFetch({
 export const usePostFetch = <T>(
   url: MaybeRefOrGetter<string>,
   payloadConfig: PostFetchPayLoadConfig,
-  UseFetchParams?: UseFetchParams
+  UseFetchParams?: UseFetchParams,
 ) => {
   const { payload, type } = payloadConfig;
   const {
@@ -51,7 +51,7 @@ export const usePostFetch = <T>(
 
 export const useGetFetch = <T>(
   url: MaybeRefOrGetter<string>,
-  UseFetchParams?: UseFetchParams
+  UseFetchParams?: UseFetchParams,
 ) => {
   const {
     responseDataType = "json",

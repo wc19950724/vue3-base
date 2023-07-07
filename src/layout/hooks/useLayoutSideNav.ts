@@ -17,7 +17,7 @@ export const useMenu = () => {
   const collapsed = ref(false);
 
   const iconName = computed(() =>
-    collapsed.value ? "chevron-right" : "chevron-left"
+    collapsed.value ? "chevron-right" : "chevron-left",
   );
 
   const changeCollapsed = () => {

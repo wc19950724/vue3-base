@@ -29,6 +29,6 @@ withDefaults(
   }>(),
   {
     menu: () => [],
-  }
+  },
 );
 </script>

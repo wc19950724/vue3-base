@@ -68,7 +68,7 @@ watch(
         }
         // 面包屑中作为父级路由的菜单
         return allRoutes.filter(
-          (it) => it.path === item.to && it.children?.length
+          (it) => it.path === item.to && it.children?.length,
         );
       })
       .map((item) => item.to as string);
@@ -89,6 +89,6 @@ watch(
   },
   {
     immediate: true,
-  }
+  },
 );
 </script>

@@ -32,6 +32,6 @@ ${gapChar.repeat(6)}\
     `font-size:${secondarySize}px; ${mainBaseStyle};
         color: #58ad35;
         padding-top: ${mainSize - secondarySize + mainPaddingV}px`,
-    `color: #999; font-size: ${normalSize}px; font-family: "Roboto";`
+    `color: #999; font-size: ${normalSize}px; font-family: "Roboto";`,
   );
 };

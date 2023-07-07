@@ -54,7 +54,7 @@ const doLoad = () => {
 
         timerCallback();
       },
-      false
+      false,
     );
   }
 };

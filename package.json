@@ -23,10 +23,13 @@
     "start": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "pnpm prettier && vue-tsc && pnpm eslint",
+    "lint": "pnpm prettier && pnpm eslint && pnpm check",
     "prettier": "prettier --ignore-path .eslintignore **/*.{vue,js,jsx,cjs,mjs,ts,tsx,cts,mts} --write",
     "eslint": "eslint **/*.{vue,js,jsx,cjs,mjs,ts,tsx,cts,mts} --fix",
-    "release": "release-cli"
+    "check": "vue-tsc --noEmit -p tsconfig.json",
+    "release": "release-cli",
+    "preinstall": "npx only-allow pnpm",
+    "postinstall": "simple-git-hooks"
   },
   "dependencies": {
     "@vueuse/core": "^10.2.1",
@@ -56,11 +59,11 @@
     "eslint-plugin-prettier": "^5.0.0-alpha.2",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "eslint-plugin-vue": "^9.15.1",
-    "ghooks": "^2.0.4",
     "less": "^4.1.3",
     "lint-staged": "^13.2.3",
     "prettier": "^3.0.0",
     "release-base-cli": "^1.0.3",
+    "simple-git-hooks": "^2.8.1",
     "typescript": "^5.1.6",
     "unplugin-auto-import": "^0.16.6",
     "unplugin-vue-components": "^0.25.1",
@@ -71,12 +74,11 @@
   },
   "lint-staged": {
     "*.{vue,js,jsx,cjs,mjs,ts,tsx,cts,mts}": [
-      "pnpm lint"
+      "prettier --ignore-path .eslintignore --write",
+      "eslint --fix"
     ]
   },
-  "config": {
-    "ghooks": {
-      "pre-commit": "npx lint-staged --quiet --concurrent false"
-    }
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged && pnpm check"
   }
 }
